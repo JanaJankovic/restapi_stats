@@ -34,7 +34,7 @@ router.get("/all", async (req, res) => {
   }
 });
 
-// UPDATE
+// UPDATE specific
 router.post("/update", async (req, res) => {
   try {
     const url = req.body.url;
