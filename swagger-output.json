@@ -5,7 +5,7 @@
     "description": "Documentation for Order Service Statistics",
     "version": "1.0.0"
   },
-  "host": "localhost:4000",
+  "host": "https://order-stats.herokuapp.com/doc",
   "basePath": "/",
   "schemes": [
     "http"

@@ -5,7 +5,7 @@ const doc = {
     title: "API for Order Service Statistics",
     description: "Documentation for Order Service Statistics",
   },
-  host: "localhost:4000",
+  host: "https://order-stats.herokuapp.com/doc",
   schemes: ["http"],
 };
 
