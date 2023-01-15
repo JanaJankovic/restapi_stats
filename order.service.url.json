@@ -1,0 +1,46 @@
+[
+    {
+        "url": "/order/:session_id",
+        "calls": 0
+    },
+    {
+        "url": "/order/user/:user_id",
+        "calls": 0
+    },
+    {
+        "url": "/order/totalAmount/:order_id",
+        "calls": 0
+    },
+    {
+        "url": "/order",
+        "calls": 0
+    },
+    {
+        "url": "/order/complete/:order_id",
+        "calls": 0
+    },
+    {
+        "url": "/order/:order_id",
+        "calls": 0
+    },
+    {
+        "url": "/item/:order_id",
+        "calls": 0
+    },
+    {
+        "url": "post/item",
+        "calls": 0
+    },
+    {
+        "url": "put/item",
+        "calls": 0
+    },
+    {
+        "url": "/item/empty-cart/:order_id",
+        "calls": 0
+    },
+    {
+        "url": "/item/:item_id",
+        "calls": 0
+    }
+]
