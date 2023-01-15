@@ -5,10 +5,10 @@
     "description": "Documentation for Order Service Statistics",
     "version": "1.0.0"
   },
-  "host": "https://order-stats.herokuapp.com/doc",
+  "host": "order-stats.herokuapp.com",
   "basePath": "/",
   "schemes": [
-    "http"
+    "https"
   ],
   "paths": {
     "/stats/last": {

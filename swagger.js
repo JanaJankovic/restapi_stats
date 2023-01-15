@@ -5,8 +5,8 @@ const doc = {
     title: "API for Order Service Statistics",
     description: "Documentation for Order Service Statistics",
   },
-  host: "https://order-stats.herokuapp.com/doc",
-  schemes: ["http"],
+  host: "order-stats.herokuapp.com",
+  schemes: ["https"],
 };
 
 const outputFile = "./swagger-output.json";
