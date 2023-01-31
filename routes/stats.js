@@ -8,9 +8,9 @@ const Stat = require("./stats.model");
 router.get("/last", async (req, res) => {
   try {
     const earliest = await Stat.findOne().sort({ last_called: -1 });
-    res.json(earliest);
+    return res.json(earliest);
   } catch (err) {
-    res.json({ message: err, error: true });
+    return res.json({ message: err, error: true });
   }
 });
 
@@ -18,9 +18,9 @@ router.get("/last", async (req, res) => {
 router.get("/top", async (req, res) => {
   try {
     const top = await Stat.findOne().sort({ calls: -1 });
-    res.json(top);
+    return res.json(top);
   } catch (err) {
-    res.json({ message: err, error: true });
+    return res.json({ message: err, error: true });
   }
 });
 
@@ -28,9 +28,9 @@ router.get("/top", async (req, res) => {
 router.get("/all", async (req, res) => {
   try {
     const all = await Stat.find();
-    res.json(all);
+    return res.json(all);
   } catch (err) {
-    res.json({ message: err, error: true });
+    return res.json({ message: err, error: true });
   }
 });
 
@@ -39,7 +39,10 @@ router.post("/update", async (req, res) => {
   try {
     const url = req.body.url;
     const stat = await Stat.findOne({ url: url });
-    if (stat == undefined) res.json({ message: "Url not found", error: false });
+    if (stat == undefined) {
+      return res.json({ message: "Url not found", error: false });
+    }
+
     stat.calls = stat.calls + 1;
     await Stat.updateOne(
       { url: url },
@@ -50,9 +53,9 @@ router.post("/update", async (req, res) => {
         },
       }
     );
-    res.json({ message: "Updated", error: false });
+    return res.json({ message: "Updated", error: false });
   } catch (err) {
-    res.json({ message: err });
+    return res.json({ message: err });
   }
 });
 
